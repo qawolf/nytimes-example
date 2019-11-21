@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qawolf/nytimes-example.git"
@@ -15,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/qawolf/nytimes-example/issues"
   },
-  "homepage": "https://github.com/qawolf/nytimes-example#readme"
+  "homepage": "https://github.com/qawolf/nytimes-example#readme",
+  "devDependencies": {
+    "qawolf": "^0.5.13"
+  }
 }
