@@ -1,0 +1,164 @@
+{
+ "name": "nytimes",
+ "size": "desktop",
+ "steps": [
+  {
+   "action": "click",
+   "index": 0,
+   "pageId": 0,
+   "target": {
+    "alt": null,
+    "ariaLabel": null,
+    "classList": [
+     "css-fnhm75",
+     "ewfai8r0"
+    ],
+    "dataValue": null,
+    "href": null,
+    "iconContent": [
+     "<path fill=\"#333\" d=\"M11.3,9.2C11.7,8.4,12,7.5,12,6.5C12,3.5,9.5,1,6.5,1S1,3.5,1,6.5S3.5,12,6.5,12c1,0,1.9-0.3,2.7-0.7l3.3,3.3c0.3,0.3,0.7,0.4,1.1,0.4s0.8-0.1,1.1-0.4c0.6-0.6,0.6-1.5,0-2.1L11.3,9.2zM6.5,10.3c-2.1,0-3.8-1.7-3.8-3.8c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C10.3,8.6,8.6,10.3,6.5,10.3z\"></path>"
+    ],
+    "id": null,
+    "inputType": "submit",
+    "isContentEditable": false,
+    "labels": null,
+    "name": null,
+    "parentText": [
+     "search",
+     "search"
+    ],
+    "placeholder": null,
+    "src": null,
+    "innerText": "search",
+    "tagName": "button",
+    "title": null,
+    "xpath": "//*[@id='app']/div[2]/div/header/section[1]/div[1]/div[2]/button"
+   }
+  },
+  {
+   "action": "type",
+   "index": 1,
+   "pageId": 0,
+   "target": {
+    "alt": null,
+    "ariaLabel": null,
+    "classList": [
+     "css-1rqpf1s"
+    ],
+    "dataValue": "search-input",
+    "href": null,
+    "iconContent": null,
+    "id": null,
+    "inputType": "text",
+    "isContentEditable": false,
+    "labels": null,
+    "name": "query",
+    "parentText": [
+     "go",
+     "go"
+    ],
+    "placeholder": "search",
+    "src": null,
+    "innerText": null,
+    "tagName": "input",
+    "title": null,
+    "xpath": "//*[@id='app']/div[2]/div/header/section[1]/div[1]/div[2]/div/form/div/input"
+   },
+   "value": "↓KeyG↑KeyG↓KeyI↓KeyT↑KeyI↑KeyT↓KeyH↓KeyU↑KeyH↑KeyU↓KeyB↑KeyB"
+  },
+  {
+   "action": "type",
+   "index": 2,
+   "pageId": 0,
+   "target": {
+    "alt": null,
+    "ariaLabel": null,
+    "classList": [
+     "css-1rqpf1s"
+    ],
+    "dataValue": "search-input",
+    "href": null,
+    "iconContent": null,
+    "id": null,
+    "inputType": "text",
+    "isContentEditable": false,
+    "labels": null,
+    "name": "query",
+    "parentText": [
+     "go",
+     "go"
+    ],
+    "placeholder": "search",
+    "src": null,
+    "innerText": null,
+    "tagName": "input",
+    "title": null,
+    "xpath": "//*[@id='app']/div[2]/div/header/section[1]/div[1]/div[2]/div/form/div/input[1]"
+   },
+   "value": "↓Enter"
+  },
+  {
+   "action": "click",
+   "index": 3,
+   "pageId": 0,
+   "target": {
+    "alt": null,
+    "ariaLabel": null,
+    "classList": [
+     "css-13xu0ly",
+     "ez4a0qj0"
+    ],
+    "dataValue": "login-button",
+    "href": null,
+    "iconContent": null,
+    "id": null,
+    "inputType": "submit",
+    "isContentEditable": false,
+    "labels": null,
+    "name": null,
+    "parentText": [
+     "log in",
+     "log in"
+    ],
+    "placeholder": null,
+    "src": null,
+    "innerText": "log in",
+    "tagName": "button",
+    "title": null,
+    "xpath": "//*[@id='app']/div[1]/div/header/section[1]/div[3]/div[2]/a/button"
+   }
+  },
+  {
+   "action": "click",
+   "index": 4,
+   "pageId": 0,
+   "target": {
+    "alt": null,
+    "ariaLabel": null,
+    "classList": [
+     "css-xach3n-FooterLink",
+     "exjsm412"
+    ],
+    "dataValue": "switch-to-register",
+    "href": "https://myaccount.nytimes.com/auth/login?response_type=cookie&client_id=vi&redirect_uri=https%3A%2F%2Fwww.nytimes.com%2Fsubscription%2Fmultiproduct%2Flp8KQUS.html%3FcampaignId%3D7QQFH%26EXIT_URI%3Dhttps%253A%252F%252Fwww.nytimes.com%252Fsearch%253Fquery%253Dgithub#",
+    "iconContent": null,
+    "id": null,
+    "inputType": null,
+    "isContentEditable": false,
+    "labels": null,
+    "name": null,
+    "parentText": [
+     "create one",
+     "don't have a times account? create one"
+    ],
+    "placeholder": null,
+    "src": null,
+    "innerText": "create one",
+    "tagName": "a",
+    "title": null,
+    "xpath": "//*[@id='myAccountAuth']/div[1]/div/form/div/footer/span/a"
+   }
+  }
+ ],
+ "url": "https://www.nytimes.com/"
+}

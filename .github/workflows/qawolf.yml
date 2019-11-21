@@ -1,0 +1,26 @@
+name: qawolf
+on:
+  push:
+    # test every branch
+    # edit below if you only want certain branches tested
+    branches: "*"
+  schedule:
+    # test on schedule using cron syntax
+    - cron: "0 * * * *"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 50
+      - name: qawolf test
+        uses: qawolf/qawolf@master
+      - name: Upload Artifacts
+        # include test artifacts
+        # edit below to only include artifacts in certain scenarios
+        if: always()
+        uses: actions/upload-artifact@master
+        with:
+          name: qawolf
+          path: "./artifacts"
