@@ -8,6 +8,8 @@ jobs:
           QAW_DOM_PATH: /tmp/artifacts
           QAW_LOG_PATH: /tmp/artifacts
           QAW_VIDEO_PATH: /tmp/artifacts
+          # parameterize tests
+          QAW_DATA_ATTRIBUTE: data-testid
     steps:
       # checkout to include the .qawolf/ folder
       - checkout

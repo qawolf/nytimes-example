@@ -20,6 +20,8 @@ steps:
       QAW_DOM_PATH: $(System.DefaultWorkingDirectory)/artifacts
       QAW_LOG_PATH: $(System.DefaultWorkingDirectory)/artifacts
       QAW_VIDEO_PATH: $(System.DefaultWorkingDirectory)/artifacts
+      # parameterize tests
+      QAW_DATA_ATTRIBUTE: data-testid
 
   - publish: $(System.DefaultWorkingDirectory)/artifacts
     artifact: artifacts
