@@ -1,0 +1,26 @@
+# configure the pipeline to run based on different triggers
+# see https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#triggers
+trigger:
+  - master
+
+resources:
+  containers:
+    - container: qawolf
+      image: qawolf/qawolf:latest
+
+pool:
+  vmImage: "ubuntu-16.04"
+
+container: qawolf
+
+steps:
+  - script: qawolf test
+    env:
+      # output artifacts
+      QAW_DOM_PATH: $(System.DefaultWorkingDirectory)/artifacts
+      QAW_LOG_PATH: $(System.DefaultWorkingDirectory)/artifacts
+      QAW_VIDEO_PATH: $(System.DefaultWorkingDirectory)/artifacts
+
+  - publish: $(System.DefaultWorkingDirectory)/artifacts
+    artifact: artifacts
+    condition: always()
