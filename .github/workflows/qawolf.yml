@@ -19,6 +19,7 @@ jobs:
         env:
           # parameterize tests
           QAW_DATA_ATTRIBUTE: data-testid
+          QAW_NAVIGATION_TIMEOUT_MS: 120000
       - name: Upload Artifacts
         # include test artifacts
         # edit below to only include artifacts in certain scenarios
