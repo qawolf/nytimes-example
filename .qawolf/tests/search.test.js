@@ -4,14 +4,14 @@ describe('search', () => {
   });
 
   it('can type into "query" input', async () => {
-    await type(steps[1], values[1]);
+    await type(steps[1], "github");
   });
 
   it('can Enter', async () => {
-    await type(steps[2], values[2]);
+    await type(steps[2], "↓Enter↑Enter");
   });
 
   it('can scroll', async () => {
-    await scroll(steps[3], values[3]);
+    await scroll(steps[3], { x: 0, y: 1626 });
   });
 });

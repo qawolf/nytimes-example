@@ -24,8 +24,7 @@
     "node": "<input data-testid=\"search-input\" class=\"css-1rqpf1s\" type=\"text\" name=\"query\" placeholder=\"SEARCH\" value=\"\"/>"
    },
    "index": 1,
-   "page": 0,
-   "value": "↓KeyG↑KeyG↓KeyI↓KeyT↑KeyI↑KeyT↓KeyH↓KeyU↑KeyH↑KeyU↓KeyB↑KeyB"
+   "page": 0
   },
   {
    "action": "type",
@@ -37,8 +36,7 @@
     "node": "<input data-testid=\"search-input\" class=\"css-1rqpf1s\" type=\"text\" name=\"query\" placeholder=\"SEARCH\" value=\"github\"/>"
    },
    "index": 2,
-   "page": 0,
-   "value": "↓Enter↑Enter"
+   "page": 0
   },
   {
    "action": "scroll",
@@ -47,12 +45,8 @@
     "node": "<html/>"
    },
    "index": 3,
-   "page": 0,
-   "value": {
-    "x": 0,
-    "y": 1640
-   }
+   "page": 0
   }
  ],
- "url": "https://www.nytimes.com/"
+ "url": "https://nytimes.com/"
 }

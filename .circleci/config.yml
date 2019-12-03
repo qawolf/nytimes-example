@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: qawolf/qawolf:v0.6.0-alpha.0
+      - image: qawolf/qawolf:v0.6.0
         environment:
           # output artifacts
           QAW_DOM_PATH: /tmp/artifacts

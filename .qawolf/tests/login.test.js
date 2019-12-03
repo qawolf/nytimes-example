@@ -1,5 +1,5 @@
 describe('login', () => {
-  it('can click "LOG IN" button', async () => {
+  it('can click "Log In" button', async () => {
     await click(steps[0]);
   });
 

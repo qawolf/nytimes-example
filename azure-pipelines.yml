@@ -6,7 +6,7 @@ trigger:
 resources:
   containers:
     - container: qawolf
-      image: qawolf/qawolf:v0.6.0-alpha.0
+      image: qawolf/qawolf:v0.6.0
 
 pool:
   vmImage: "ubuntu-16.04"
