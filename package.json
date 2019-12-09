@@ -15,6 +15,6 @@
   },
   "homepage": "https://github.com/qawolf/nytimes-example#readme",
   "devDependencies": {
-    "qawolf": "^0.5.13"
+    "qawolf": "^0.7.0"
   }
 }

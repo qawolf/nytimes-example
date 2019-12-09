@@ -1,17 +1,28 @@
-describe('search', () => {
+const { launch } = require("qawolf");
+const selectors = require("../selectors/search");
+
+describe("search", () => {
+  let browser;
+
+  beforeAll(async () => {
+    browser = await launch({ url: "https://nytimes.com/" });
+  });
+
+  afterAll(() => browser.close());
+
   it('can click "SEARCH" button', async () => {
-    await click(steps[0]);
+    await browser.click(selectors[0]);
   });
 
   it('can type into "query" input', async () => {
-    await type(steps[1], "github");
+    await browser.type(selectors[1], "github");
   });
 
-  it('can Enter', async () => {
-    await type(steps[2], "↓Enter↑Enter");
+  it("can Enter", async () => {
+    await browser.type(selectors[2], "↓Enter↑Enter");
   });
 
-  it('can scroll', async () => {
-    await scroll(steps[3], { x: 0, y: 1626 });
+  it("can scroll", async () => {
+    await browser.scroll(selectors[3], { x: 0, y: 1946 });
   });
 });

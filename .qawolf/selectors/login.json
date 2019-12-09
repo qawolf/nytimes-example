@@ -1,0 +1,24 @@
+[
+  {
+    "index": 0,
+    "page": 0,
+    "html": {
+      "ancestors": [
+        "<a href=\"https://myaccount.nytimes.com/auth/login?response_type=cookie&amp;client_id=vi&amp;redirect_uri=https%3A%2F%2Fwww.nytimes.com%2Fsubscription%2Fmultiproduct%2Flp8KQUS.html%3FcampaignId%3D7QQFH%26EXIT_URI%3Dhttps%253A%252F%252Fwww.nytimes.com%252F\" class=\"css-lnobot\"></a>",
+        "<div class=\"css-1cukv6j ez4a0qj1\"></div>"
+      ],
+      "node": "<button data-testid=\"login-button\" class=\"css-k2vvqu ez4a0qj0\" innertext=\"Log In\">Log In</button>"
+    }
+  },
+  {
+    "index": 1,
+    "page": 0,
+    "html": {
+      "ancestors": [
+        "<span class=\"css-1l5rmpn-FooterText exjsm411\"></span>",
+        "<footer class=\"css-3wyerx-Footer exjsm410\"></footer>"
+      ],
+      "node": "<a href=\"#\" tabindex=\"0\" data-testid=\"switch-to-register\" class=\"css-oad4r-FooterLink exjsm412\" innertext=\"Create one\">Create one</a>"
+    }
+  }
+]

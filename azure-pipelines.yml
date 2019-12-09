@@ -3,7 +3,7 @@
 resources:
   containers:
     - container: qawolf
-      image: qawolf/qawolf:v0.6.0
+      image: qawolf/qawolf:v0.7.0
 
 pool:
   vmImage: "ubuntu-16.04"
