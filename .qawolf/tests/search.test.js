@@ -15,14 +15,14 @@ describe("search", () => {
   });
 
   it('can type into "query" input', async () => {
-    await browser.type(selectors[1], "github");
+    await browser.type({ css: "[data-testid='search-input']" }, "github");
   });
 
   it("can Enter", async () => {
-    await browser.type(selectors[2], "↓Enter↑Enter");
+    await browser.type({ css: "[data-testid='search-input']" }, "↓Enter↑Enter");
   });
 
   it("can scroll", async () => {
-    await browser.scroll(selectors[3], { x: 0, y: 1946 });
+    await browser.scroll(selectors[3], { x: 0, y: 2005 });
   });
 });

@@ -11,10 +11,10 @@ describe('login', () => {
   afterAll(() => browser.close());
 
   it('can click "Log In" button', async () => {
-    await browser.click(selectors[0]);
+    await browser.click({ css: "[data-testid='login-button']" });
   });
 
   it('can click "Create one" link', async () => {
-    await browser.click(selectors[1]);
+    await browser.click({ css: "[data-testid='switch-to-register']" });
   });
 });
