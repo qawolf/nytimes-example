@@ -1,7 +1,7 @@
 # configure the pipeline to run based on different triggers
 # see https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#triggers
 pool:
-  vmImage: "ubuntu-16.04"
+  vmImage: "ubuntu-18.04"
 
 steps:
   - task: NodeTool@0
