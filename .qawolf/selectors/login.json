@@ -1,10 +1,10 @@
 [
  {
-  "index": 0,
-  "css": "[data-testid='login-button']"
+  "css": "[data-testid='login-button']",
+  "index": 0
  },
  {
-  "index": 1,
-  "css": "[data-testid='switch-to-register']"
+  "css": "[data-testid='switch-to-register']",
+  "index": 1
  }
 ]

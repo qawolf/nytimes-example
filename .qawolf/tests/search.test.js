@@ -1,7 +1,7 @@
 const { launch } = require("qawolf");
 const selectors = require("../selectors/search");
 
-describe("search", () => {
+describe('search', () => {
   let browser;
 
   beforeAll(async () => {
@@ -9,20 +9,20 @@ describe("search", () => {
   });
 
   afterAll(() => browser.close());
-
+  
   it('can click "SEARCH" button', async () => {
     await browser.click(selectors[0]);
   });
-
+  
   it('can type into "query" input', async () => {
     await browser.type({ css: "[data-testid='search-input']" }, "github");
   });
-
+  
   it("can Enter", async () => {
     await browser.type({ css: "[data-testid='search-input']" }, "↓Enter↑Enter");
   });
-
+  
   it("can scroll", async () => {
-    await browser.scroll(selectors[3], { x: 0, y: 2005 });
+    await browser.scroll(selectors[3], { x: 0, y: 1781 });
   });
 });

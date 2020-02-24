@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:12.14.0-browsers
+      - image: qawolf/qawolf:v0.9.3-alpha.0
     steps:
       - checkout
 
@@ -18,7 +18,8 @@ jobs:
             - ./node_modules
 
       - run:
-          command: npx qawolf test
+          command: |
+            npx qawolf test --all-browsers
           environment:
             QAW_ARTIFACT_PATH: /tmp/artifacts
 
