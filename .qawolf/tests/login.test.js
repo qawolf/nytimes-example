@@ -1,20 +1,23 @@
-const { launch } = require("qawolf");
-const selectors = require("../selectors/login");
+const qawolf = require("qawolf");
+const selectors = require("../selectors/login.json");
 
-describe('login', () => {
-  let browser;
+let browser;
+let page;
 
-  beforeAll(async () => {
-    browser = await launch({ url: "https://nytimes.com/" });
-  });
+beforeAll(async () => {
+  browser = await qawolf.launch();
+  const context = await browser.newContext();
+  await qawolf.register(context);
+  page = await context.newPage();
+});
 
-  afterAll(() => browser.close());
-  
-  it('can click "LOG IN" button', async () => {
-    await browser.click({ css: "[data-testid='login-button']" });
-  });
-  
-  it('can click "Create one" link', async () => {
-    await browser.click({ css: "[data-testid='switch-to-register']" });
-  });
+afterAll(async () => {
+  await qawolf.stopVideos();
+  await browser.close();
+});
+
+test("login", async () => {
+  await page.goto("https://nytimes.com/");
+  await page.click("[data-testid='login-button']");
+  await page.click("[data-testid='switch-to-register']");
 });

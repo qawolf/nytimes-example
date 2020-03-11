@@ -1,28 +1,25 @@
-const { launch } = require("qawolf");
-const selectors = require("../selectors/search");
+const qawolf = require("qawolf");
+const selectors = require("../selectors/search.json");
 
-describe('search', () => {
-  let browser;
+let browser;
+let page;
 
-  beforeAll(async () => {
-    browser = await launch({ url: "https://nytimes.com/" });
-  });
+beforeAll(async () => {
+  browser = await qawolf.launch();
+  const context = await browser.newContext();
+  await qawolf.register(context);
+  page = await context.newPage();
+});
 
-  afterAll(() => browser.close());
-  
-  it('can click "SEARCH" button', async () => {
-    await browser.click(selectors[0]);
-  });
-  
-  it('can type into "query" input', async () => {
-    await browser.type({ css: "[data-testid='search-input']" }, "github");
-  });
-  
-  it("can Enter", async () => {
-    await browser.type({ css: "[data-testid='search-input']" }, "↓Enter↑Enter");
-  });
-  
-  it("can scroll", async () => {
-    await browser.scroll(selectors[3], { x: 0, y: 1781 });
-  });
+afterAll(async () => {
+  await qawolf.stopVideos();
+  await browser.close();
+});
+
+test("search", async () => {
+  await page.goto("https://nytimes.com/");
+  await page.click(selectors["0_button"]);
+  await page.type("[data-testid='search-input']", "github");
+  await page.press("[data-testid='search-input']", "Enter");
+  await qawolf.scroll(page, "html", { x: 0, y: 899 });
 });

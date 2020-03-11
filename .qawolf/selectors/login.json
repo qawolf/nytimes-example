@@ -1,10 +1,4 @@
-[
- {
-  "css": "[data-testid='login-button']",
-  "index": 0
- },
- {
-  "css": "[data-testid='switch-to-register']",
-  "index": 1
- }
-]
+{
+ "0_button": "[data-testid='login-button']",
+ "1_a": "[data-testid='switch-to-register']"
+}

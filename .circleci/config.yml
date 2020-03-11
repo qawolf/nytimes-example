@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: qawolf/qawolf:v0.9.3-alpha.0
+      - image: qawolf/playwright-ci:v0.5.0
     steps:
       - checkout
 
@@ -19,9 +19,28 @@ jobs:
 
       - run:
           command: |
-            npx qawolf test --all-browsers
+            # # Start local server
+            # npm run start & 
+            # npx wait-on http://localhost:3000
+            npx qawolf test --headless
           environment:
+            # configure tests with environment variables
             QAW_ARTIFACT_PATH: /tmp/artifacts
-
       - store_artifacts:
           path: /tmp/artifacts
+
+# # example for running on a schedule, edit to suit your use case
+# # documentation: https://circleci.com/docs/2.0/configuration-reference/#schedule
+# workflows:
+#   version: 2
+#   on_schedule:
+#     jobs:
+#       - build
+#     triggers:
+#       - schedule:
+#           # test on schedule using cron syntax
+#           cron: "0 * * * *" # every hour
+#           filters:
+#             branches:
+#               only:
+#                 - master

@@ -1,3 +1,5 @@
+# configure the pipeline to run based on different triggers
+# see https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema#triggers
 pool:
   vmImage: "ubuntu-18.04"
 
@@ -16,8 +18,12 @@ steps:
 
   - script: npm install
 
-  - script: npx qawolf test --all-browsers
+  # # Start local server
+  # - script: npm run start & npx wait-on http://localhost:3000
+
+  - script: npx qawolf test --headless
     env:
+      # configure tests with environment variables
       QAW_ARTIFACT_PATH: $(System.DefaultWorkingDirectory)/artifacts
 
   - publish: $(System.DefaultWorkingDirectory)/artifacts
